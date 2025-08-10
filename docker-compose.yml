@@ -7,12 +7,6 @@ services:
     volumes:
       - .:/var/www/html
     working_dir: /var/www/html/
-    healthcheck:
-    test: ["CMD", "curl", "-f", "http://localhost:9000"]
-    interval: 10s
-    timeout: 5s
-    retries: 5
-    start_period: 30s
     depends_on:
       - db
 
@@ -24,11 +18,8 @@ services:
     volumes:
       - .:/var/www/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-    command: sh -c "dockerize -wait tcp://php:9000 -timeout 30s nginx -g 'daemon off;'"
-    
     depends_on:
-      php:
-      condition: service_healthy
+      - php
 
   db:
     image: mariadb:latest
