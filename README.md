@@ -1,4 +1,8 @@
-**Amit Patel**
+<div align="center">
+
+<h1 style="color: #1e90ff;"><b>Amit Patel</b></h1>
+
+</div>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk.svg" width="400"></a></p>
 
